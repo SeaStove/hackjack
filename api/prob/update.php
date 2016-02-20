@@ -1,4 +1,9 @@
 <?php
+ini_set("display_errors", 1);
+ini_set("track_errors", 1);
+ini_set("html_errors", 1);
+error_reporting(E_ALL);
+
   require '/var/www/hackjack/db/creds.php';
 
   if(isset($_POST['id']) && isset($_POST['card']) && isset($_POST['cardVal']) && isset($_POST['total'])){
@@ -19,5 +24,7 @@
 
             print json_encode($response);
         }
-  }
+  } else {
+  print json_encode("please set params");
+}
  ?>
