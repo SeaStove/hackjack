@@ -1,5 +1,8 @@
 use hackjack;
 
+DELETE * from probability;
+DELETe * from trueCount;
+
 DROP TABLE IF EXISTS game;
 
 CREATE TABLE game(
