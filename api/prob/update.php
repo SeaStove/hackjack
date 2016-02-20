@@ -10,6 +10,7 @@
     $sql = "UPDATE probability
             SET " . $card . " = '" . $cardVal "', total = '" . $total "'
             WHERE id = '" . $id . "';";
+    $result = mysqli_query($mysqli,$sql);
     if (!$result) {
             $response['message'] = "Query Failed" . mysql_error();
             die(json_encode($response));

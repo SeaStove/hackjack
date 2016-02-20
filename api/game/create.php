@@ -7,9 +7,7 @@ error_reporting(E_ALL);
     $response['status'] = 'bad';
     if(isset($_POST)){
         $sql="INSERT INTO game(status) VALUES ('created');";
-        //echo $sql;
         $result = mysqli_query($mysqli,$sql);
-        //echo mysql_error();
         if (!$result) {
             $response['message'] = "Query Failed" . mysqli_error($mysqli);
             die(json_encode($response));

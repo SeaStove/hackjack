@@ -12,6 +12,7 @@
                 decks = '" . $decks "',
                 running = '" . $running . "'
             WHERE id = '" . $id . "';";
+    $result = mysqli_query($mysqli,$sql);
     if (!$result) {
             $response['message'] = "Query Failed" . mysql_error();
             die(json_encode($response));
