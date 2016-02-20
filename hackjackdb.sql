@@ -16,13 +16,47 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Cards`
+-- Table structure for table `Probability`
 --
 
-DROP TABLE IF EXISTS `Cards`;
+DROP TABLE IF EXISTS `Probability`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Cards` (
+CREATE TABLE `Probability` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `ace` int(11) DEFAULT NULL,
+  `one` int(11) DEFAULT NULL,
+  `two` int(11) DEFAULT NULL,
+  `three` int(11) DEFAULT NULL,
+  `four` int(11) DEFAULT NULL,
+  `five` int(11) DEFAULT NULL,
+  `six` int(11) DEFAULT NULL,
+  `seven` int(11) DEFAULT NULL,
+  `eight` int(11) DEFAULT NULL,
+  `nine` int(11) DEFAULT NULL,
+  `ten` int(11) DEFAULT NULL,
+  `TotalFields` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Probability`
+--
+
+LOCK TABLES `Probability` WRITE;
+/*!40000 ALTER TABLE `Probability` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Probability` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `TrueCount`
+--
+
+DROP TABLE IF EXISTS `TrueCount`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `TrueCount` (
   `CardID` int(11) NOT NULL AUTO_INCREMENT,
   `ace` int(11) DEFAULT '1',
   `one` int(11) DEFAULT '-1',
@@ -40,12 +74,12 @@ CREATE TABLE `Cards` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Cards`
+-- Dumping data for table `TrueCount`
 --
 
-LOCK TABLES `Cards` WRITE;
-/*!40000 ALTER TABLE `Cards` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Cards` ENABLE KEYS */;
+LOCK TABLES `TrueCount` WRITE;
+/*!40000 ALTER TABLE `TrueCount` DISABLE KEYS */;
+/*!40000 ALTER TABLE `TrueCount` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -57,4 +91,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-02-20  8:37:49
+-- Dump completed on 2016-02-20  9:42:04
