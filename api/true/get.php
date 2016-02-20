@@ -11,7 +11,7 @@
             die(json_encode($response));
         } else {
             $response['status'] = "ok";
-            $response['data'] = mysqli_fetch_row($result);
+            $response['data'] = mysqli_fetch_assoc($result);
 
             print json_encode($response);
         }
