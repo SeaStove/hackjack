@@ -1,8 +1,8 @@
 <?php
   require '/var/www/hackjack/db/creds.php';
 
-  if(isset($_POST['trueId'])){
-    $id = htmlspecialchars($_POST['trueId']);
+  if(isset($_POST['id'])){
+    $id = htmlspecialchars($_POST['id']);
 
     $sql = "select * from trueCount where id = '" . $id . "';";
     if (!$result) {

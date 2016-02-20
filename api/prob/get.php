@@ -1,8 +1,8 @@
 <?php
   require '/var/www/hackjack/db/creds.php';
 
-  if(isset($_POST['probId'])){
-    $id = htmlspecialchars($_POST['probId']);
+  if(isset($_POST['id'])){
+    $id = htmlspecialchars($_POST['id']);
 
     $sql = "select * from probability where id = '" . $id . "';";
     if (!$result) {
