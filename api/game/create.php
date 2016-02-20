@@ -18,14 +18,14 @@ error_reporting(E_ALL);
             $sql="INSERT INTO probability(id) VALUES ('" . $id . "');";
             $result = mysqli_query($mysqli,$sql);
 
-            if(!result){
+            if(!$result){
               $response['message'] = "Query Failed" . mysqli_error($mysqli);
               die(json_encode($response));
             } else {
               //creating prob row
               $sql="INSERT INTO trueCount(id) VALUES ('" . $id . "');";
               mysqli_query($mysqli,$sql);
-              if(!result){
+              if(!$result){
                 $response['message'] = "Query Failed" . mysqli_error($mysqli);
                 die(json_encode($response));
               } else {
