@@ -1,8 +1,8 @@
 <?php
   require '/var/www/hackjack/db/creds.php';
 
-  if(isset($_POST['probId']) && isset($_POST['card']) && isset($_POST['cardVal']) && isset($_POST['total'])){
-    $id = htmlspecialchars($_POST['probId']);
+  if(isset($_POST['id']) && isset($_POST['card']) && isset($_POST['cardVal']) && isset($_POST['total'])){
+    $id = htmlspecialchars($_POST['id']);
     $card = htmlspecialchars($_POST['card']);
     $cardVal = htmlspecialchars($_POST['cardVal']);
     $total = htmlspecialchars($_POST['total']));
