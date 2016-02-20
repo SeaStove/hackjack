@@ -25,11 +25,16 @@ resize {
 <div class = "container text-center">
   <h1>HackJack - Hack Illinois</h1>
   <p>Want to win in blackjack? Use this site and we'll do the work.</p>
+  
+  <canvas id="Probability Table" width = '200' height = '100'></canvas>
+  
   <h3>What is Card Counting?</h3>
   <p>Card Counting is used to give you a competitive edge over the "house" in blackjack. While, frowned upon it is not 
   illegal to use. This page will tell you what the true count is, what the probability of drawing every card is, and 
   whether you should stand hit or stay. We will go over the basics, but  to know more you can follow this 
+  
   <button type="button" class ="btn btn-link"><a href = 'https://en.wikipedia.org/wiki/Card_counting' target = "_blank">link.</a></button></p>
+  
   <h3>Card Counting Method </h3>
   <p>We will be using the Hi-Lo Method. The Hi-Lo Method is as follows:</p>
 
@@ -37,7 +42,8 @@ resize {
   <img src = 'http://www.blackjackapprenticeship.com/wp-content/uploads/2014/07/True-Count-Conversion-in-Card-Counting.png' alt = "True Count" width = "300" height = "211">
 
   <p>Cards 2 through 6 are counted as "-1", 7 through 9 as "0", Tens and Aces as "+1". This is known as the "Running Count".</p>
-  <p>"The "True Count" is the </p>
+  <p>"The "True Count" is the Running Count over the number of decks left (As shown above).</p>
+  
  </div>
 
 </body>
