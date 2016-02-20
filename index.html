@@ -17,16 +17,17 @@ resize {
    width:200px;
    height:40px;
 }
-
+body {background-color:black;}
 </style>
 </head>
 <body>
 
 <div class = "container text-center">
+<font color = 'white'>
   <h1>HackJack - Hack Illinois</h1>
   <p>Want to win in blackjack? Use this site and we'll do the work.</p>
   
-  <canvas id="Probability Table" width = '200' height = '100'></canvas>
+  <canvas id="Probability Table" width = '800' height = '400' style="border:1px solid #000000;"></canvas>
   
   <h3>What is Card Counting?</h3>
   <p>Card Counting is used to give you a competitive edge over the "house" in blackjack. While, frowned upon it is not 
@@ -39,12 +40,17 @@ resize {
   <p>We will be using the Hi-Lo Method. The Hi-Lo Method is as follows:</p>
 
   <img src = 'http://www.blackjackspelregels.com/Kaartentellen.jpg' alt = "Hi-Lo method">
-  <img src = 'http://www.blackjackapprenticeship.com/wp-content/uploads/2014/07/True-Count-Conversion-in-Card-Counting.png' alt = "True Count" width = "300" height = "211">
+  <img src = 'http://www.blackjackapprenticeship.com/wp-content/uploads/2014/07/True-Count-Conversion-in-Card-Counting.png' alt = "True Count" width = "300" height = "175">
 
   <p>Cards 2 through 6 are counted as "-1", 7 through 9 as "0", Tens and Aces as "+1". This is known as the "Running Count".</p>
   <p>"The "True Count" is the Running Count over the number of decks left (As shown above).</p>
-  
+  </font>
  </div>
-
+<script>
+var c = document.getElementById("Probability Table");
+var ctx = c.getContext("2d");
+ctx.fillStyle ="rgb(0, 102, 0)"
+ctx.fillRect(0, 0, 800, 400);
+</script>
 </body>
 </html>
