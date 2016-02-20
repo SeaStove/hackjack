@@ -14,16 +14,25 @@
 
             //creating true row
             $sql="INSERT INTO probability(id) VALUES ('" . $id . "');";
-            mysqli_query($mysqli,$sql);
+            $result = mysqli_query($mysqli,$sql);
 
-            //creating prob row
-            $sql="INSERT INTO trueCount(id) VALUES ('" . $id . "');";
-            mysqli_query($mysqli,$sql);
-
-            $response['status'] = 'ok';
-            $response['message'] = "Game created";
-            $response['id']      = $id;
-            print json_encode($response);
+            if(!result){
+              $response['message'] = "Query Failed" . mysqli_error($mysqli);
+              die(json_encode($response));
+            } else {
+              //creating prob row
+              $sql="INSERT INTO trueCount(id) VALUES ('" . $id . "');";
+              mysqli_query($mysqli,$sql);
+              if(!result){
+                $response['message'] = "Query Failed" . mysqli_error($mysqli);
+                die(json_encode($response));
+              } else {
+                $response['status'] = 'ok';
+                $response['message'] = "Game created";
+                $response['id']      = $id;
+                print json_encode($response);
+              }
+            }
         }
     $mysqli->close();
 ?>
