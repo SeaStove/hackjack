@@ -36,7 +36,7 @@ CREATE TABLE trueCount (
   id int(11),
   total int(11) DEFAULT 52,
   decks int(11) DEFAULT 1,
-  running int(11) DEFAULT 0
+  running int(11) DEFAULT 0,
   FOREIGN KEY (id)
     REFERENCES game(id)
     ON DELETE CASCADE
