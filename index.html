@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+<link rel="stylesheet" type="text/css" href="cards.css" media="screen" />
+<script type = "text/javascript" src ="cards.js"></script>
+<script type = "text/javascript" src ="blackjack.js"></script>
 
 <title>HackJack Hack Illinois</title>
 <meta charset="utf-8">
@@ -11,6 +14,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script>
 
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"> </script>
+
 <style>
 
 resize {
@@ -18,17 +22,79 @@ resize {
    height:40px;
 }
 body {background-color:black;}
+
 </style>
 </head>
 <body>
+<div class = "container text-center">
+<font color = "white">
+  <h1>HackJack - Hack Illinois</h1>
+  <p>Want to win in blackjack? Use this site and we'll do the work.</p>
+  </font>
+  </div>
+<!-- Dealer's area. -->
+
+<div id="dealer" class="playingField">
+  <div class="textBox name" style = "background-color:black">Dealer</font></div>
+ </div> <div id="dealerScore" class="textBox">&nbsp;</div>
+  <div id="dealerCards" class="cardArea"></div>
+</div>
+
+<!-- Main player's area. -->
+
+<div id="player0" class="playingField">
+ <div class="textBox name"style = "background-color:black"><font color = "white">Player</font></div>
+  <div id="player0Score"  class="textBox">&nbsp;</div>
+  <div id="player0Bet"    class="textBox dollars">&nbsp;</div>
+  <div id="player0Result" class="textBox result">&nbsp;</div>
+  <div id="player0Cards"  class="cardArea"></div>
+</div>
+
+<!-- Areas for the player's split hands. -->
+
+<div id="player1" class="playingField" style="display:none;">
+  <div class="textBox name">Player</div>
+  <div id="player1Score"  class="textBox">&nbsp;</div>
+  <div id="player1Bet"    class="textBox dollars">&nbsp;</div>
+  <div id="player1Result" class="textBox result">&nbsp;</div>
+  <div id="player1Cards"  class="cardArea"></div>
+</div>
+
+<div id="player2" class="playingField" style="display:none;">
+  <div class="textBox name">Player</div>
+  <div id="player2Score"  class="textBox">&nbsp;</div>
+  <div id="player2Bet"    class="textBox dollars">&nbsp;</div>
+  <div id="player2Result" class="textBox result">&nbsp;</div>
+  <div id="player2Cards"  class="cardArea"></div>
+</div>
+
+<div id="player3" class="playingField" style="display:none;">
+  <div class="textBox name">Player</div>
+  <div id="player3Score"  class="textBox">&nbsp;</div>
+  <div id="player3Bet"    class="textBox dollars">&nbsp;</div>
+  <div id="player3Result" class="textBox result">&nbsp;</div>
+  <div id="player3Cards"  class="cardArea"></div>
+</div>
+
+<!-- Game buttons. -->
+
+<form id="controls" action="">
+  <div id="controlsArea">
+    <div id="credits" class="textBox dollars">&nbsp;</div>
+    <div id="default" class="textBox dollars">&nbsp;</div>
+    <input id="deal"      class="button" type="reset" value="Deal"         onclick="startRound();return false;" />
+	<input id="hit"       class="button" type="reset" value="Hit"        onclick="playerHit();return false;"   disabled="disabled" />
+    <input id="stand"     class="button" type="reset" value="Stand"      onclick="playerStand();return false;" disabled="disabled" />
+    <input id="decrease"  class="button" type="reset" value="Decrease Bet" onclick="changeBet(-5);return false;" />
+    <input id="increase"  class="button" type="reset" value="Increase Bet" onclick="changeBet(+5);return false;" />
+    <input id="split"     class="button" type="reset" value="Split"     onclick="playerSplit();return false;"     disabled="disabled" />
+    <input id="double"    class="button" type="reset" value="Double"    onclick="playerDouble();return false;"    disabled="disabled" />
+  </div>
+</form>
 
 <div class = "container text-center">
 <font color = 'white'>
-  <h1>HackJack - Hack Illinois</h1>
-  <p>Want to win in blackjack? Use this site and we'll do the work.</p>
-  
-  <canvas id="Probability Table" width = '800' height = '400' style="border:1px solid #000000;"></canvas>
-  
+   
   <h3>What is Card Counting?</h3>
   <p>Card Counting is used to give you a competitive edge over the "house" in blackjack. While, frowned upon it is not 
   illegal to use. This page will tell you what the true count is, what the probability of drawing every card is, and 
@@ -46,11 +112,6 @@ body {background-color:black;}
   <p>"The "True Count" is the Running Count over the number of decks left (As shown above).</p>
   </font>
  </div>
-<script>
-var c = document.getElementById("Probability Table");
-var ctx = c.getContext("2d");
-ctx.fillStyle ="rgb(0, 102, 0)"
-ctx.fillRect(0, 0, 800, 400);
-</script>
+
 </body>
 </html>
