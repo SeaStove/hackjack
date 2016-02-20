@@ -6,7 +6,7 @@ CREATE TABLE game(
   id int(11) NOT NULL AUTO_INCREMENT,
   status varchar(50),
   PRIMARY KEY (id)
-)
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS probability;
 
