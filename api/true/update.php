@@ -1,6 +1,6 @@
 <?php
   require '/var/www/hackjack/db/creds.php';
-
+  $response['status'] = 'bad';
   if(isset($_POST['id']) && isset($_POST['total']) && isset($_POST['decks']) && isset($_POST['running'])){
     $id = htmlspecialchars($_POST['id']);
     $total = htmlspecialchars($_POST['total']);
@@ -21,5 +21,7 @@
 
             print json_encode($response);
         }
+  } else {
+    print json_encode($response);
   }
  ?>

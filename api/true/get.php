@@ -1,6 +1,6 @@
 <?php
   require '/var/www/hackjack/db/creds.php';
-
+  $response['status'] = 'bad';
   if(isset($_POST['id'])){
     $id = htmlspecialchars($_POST['id']);
 
@@ -15,5 +15,7 @@
 
             print json_encode($response);
         }
+  } else {
+    print json_encode($response);
   }
  ?>

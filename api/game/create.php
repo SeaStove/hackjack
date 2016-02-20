@@ -1,8 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
-
     require '/var/www/hackjack/db/creds.php';
     $response['status'] = 'bad';
     if(isset($_POST)){
