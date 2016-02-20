@@ -1,7 +1,7 @@
 <?php
     require '/home/robert/config/conn.php';
     $response['status'] = 'bad';
-
+    if(isset($_POST)){
         $sql="INSERT INTO game(status) VALUES ('created');";
         //echo $sql;
         $result = mysqli_query($mysqli,$sql);
@@ -35,4 +35,7 @@
             }
         }
     $mysqli->close();
+  } else {
+    print json_encode($response);
+  }
 ?>
