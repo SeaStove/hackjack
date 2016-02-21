@@ -26,28 +26,28 @@ function Card(rank, suit) {
 //Get and Post
 
 function updateTrue(id,total,decks,running){
-	$.post("http://hackjack.cloudapp.net/api/true/update.php", 
-			{ id: this.id, total: this.cards.length, decks = this.decks, running = this.running } );
+	//$.post("http://hackjack.cloudapp.net/api/true/update.php", 
+			//{ id: this.id, total: this.cards.length, decks = this.decks, running = this.running } );
 
 }
 
 function updateProb(_card, _cardVal){
-	$.post("http://hackjack.cloudapp.net/api/prob/update.php", 
-			{ id: this.id, total: this.cards.length, card = _card, cardVal = _cardVal } );
+	//$.post("http://hackjack.cloudapp.net/api/prob/update.php", 
+		//	{ id: this.id, total: this.cards.length, card = _card, cardVal = _cardVal } );
 
 }
 
 function getTrue(){
-	$.post("http://hackjack.cloudapp.net/api/true/get.php", { id: this.id } );
+	//$.post("http://hackjack.cloudapp.net/api/true/get.php", { id: this.id } );
 
 }
 
 function getProb(){
-	$.post("http://hackjack.cloudapp.net/api/prob/get.php", { id : this.id} );
+	//$.post("http://hackjack.cloudapp.net/api/prob/get.php", { id : this.id} );
 }
 
 function createGame(){
-	$.post("http://hackjack.cloudapp.net/api/game/create.php", function(data){this.id = data.id});
+//	$.post("http://hackjack.cloudapp.net/api/game/create.php", function(data){this.id = data.id});
 }
 
 //-----------------------------------------------------------------------------
@@ -232,14 +232,14 @@ function Stack() {
   this.deal      = stackDeal;
   this.cardCount = stackCardCount;
 }
-
+	
 //-----------------------------------------------------------------------------
 // stackMakeDeck(n): Initializes a stack using 'n' packs of cards.
 //-----------------------------------------------------------------------------
 
 function stackMakeDeck(n) {
 
-  this.decks = n;
+  this.decks = 6;
 
   var ranks = new Array("A", "2", "3", "4", "5", "6", "7", "8", "9",
                         "10", "J", "Q", "K");
@@ -339,6 +339,8 @@ var id = -1;
 var total = 52;
 var decks = 1;
 var running = 0;
+var numCards = 52;
+
 // Initialize game on page load.
 
 window.onload = initGame;
@@ -434,11 +436,27 @@ function handAddCard(card, down) {
   
   var n;
   var node;
+  numCards --;
 
   // Add the given card to the hand.
 
   n = this.cards.length;
   this.cards[n] = card;
+
+  //update running count based on card.rank
+  if(!down)
+  {
+	  
+	if(card.rank == "A" || card.rank == "K" || card.rank == "Q" || card.rank == "J" || card.rank == "10")
+	  running--;
+  
+	if(card.rank == "2" || card.rank == "3" || card.rank == "4" ||card.rank == "5" || card.rank == "6")
+	  running++;
+	
+
+  
+	trueCount(running);
+  }
 
   // Create a card node for display, set as face down if requested.
 
@@ -456,6 +474,16 @@ function handAddCard(card, down) {
     this.top = 0;
   else
     this.top += this.topIncr;
+}
+function trueCount(runningCount)
+{
+	var decks = 6;
+	var trueCount = 0;
+	trueCount = runningCount/decks;
+	var n = trueCount.toFixed(2);
+	  $("#prob").html(n);
+	  console.log(trueCount);
+	return trueCount;
 }
 
 function handRemoveCard() {
@@ -526,6 +554,8 @@ function newDeck() {
 
   deck.makeDeck(numPacks);
   deck.shuffle(numShuffles);
+  numCards = 52;
+  running = 0;
 
   // Set the burn card.
 
@@ -542,7 +572,7 @@ function getNextCard() {
   }
   
   var nextCard = deck.deal();
-	cardProbability(nextCard.rank,52);
+	//cardProbability(nextCard.rank,numCards);
   return nextCard;
 }
 
@@ -766,9 +796,6 @@ function playerSurrender() {
 }
 
 function cardProbability(dealtCard, totalCards) {
-	if(dealtCard == NaN){
-		if(dealtCard == "A")
-	}
 	
 	var total;
 	total = dealtCard/totalCards;
