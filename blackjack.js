@@ -314,11 +314,12 @@ var numShuffles   =   10;
 var maxSplits     =    3;
 
 var minBet        =    5;
-var maxBet        =  100;
+var maxBet        = 1000;
 var initCredit    = 1000;
 var initBet       =   10;
 
-var dealTimeDelay =  750;
+var dealTimeDelay =  200;
+
 
 
 // Globals.
