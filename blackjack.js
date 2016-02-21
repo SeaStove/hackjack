@@ -320,6 +320,17 @@ var initBet       =   10;
 
 var dealTimeDelay =  200;
 
+var card2 = 12;
+var card3 = 12;
+var card4 = 12;
+var card5 = 12;
+var card6 = 12;
+var card7 = 12;
+var card8 = 12;
+var card9 = 12;
+var card10 = 48;
+var cardA = 12;
+var numCards = 156;
 
 
 // Globals.
@@ -340,7 +351,6 @@ var id = -1;
 var total = 52;
 var decks = 1;
 var running = 0;
-var numCards = 52;
 
 // Initialize game on page load.
 
@@ -443,6 +453,77 @@ function handAddCard(card, down) {
 
   n = this.cards.length;
   this.cards[n] = card;
+  
+	// switch(card.rank)
+	// {
+		// case '2':
+			// card2--;
+			// probability(card2,numCards);
+			// break;
+			
+		// case '3':
+			// card3--;
+			// probability(card3,numCards);
+			// break;
+			
+		// case '4':
+			// card4--;
+			// probability(card4,numCards);
+			// break;
+			
+		// case '5':
+			// card5--;
+			// probability(card5,numCards);
+			// break;
+			
+		// case '6':
+			// card6--;
+			// probability(card6,numCards);
+			// break;
+			
+		// case '7':
+			// card7--;
+			// probability(card7,numCards);
+			// break;
+			
+		// case '8':
+			// card8--;
+			// probability(card8,numCards);
+			// break;
+			
+		// case '9':
+			// card9--;
+			// probability(card9,numCards);
+			// break;
+			
+		// case '10':
+			// card10--;
+			// probability(card10,numCards);
+			// break;
+			
+		// case 'J':
+			// card10--;
+			// probability(card10,numCards);
+			// break;
+			
+		// case 'Q':
+			// card10--;
+			// probability(card10,numCards);
+			// break;
+			
+		// case 'K':
+			// card10--;
+			// probability(card10,numCards);
+			// break;
+			
+		// case 'A':
+			// cardA--;
+			// probability(cardA,numCards);
+			// break;
+		// default:
+			// console.log("Error with your Switch statement idiot. Shouldn't get here EVER");
+			// break;		
+	// }
 
   //update running count based on card.rank
   if(!down)
@@ -556,7 +637,7 @@ function newDeck() {
 
   deck.makeDeck(numPacks);
   deck.shuffle(numShuffles);
-  numCards = 52;
+  numCards = 144;
   running = 0;
 
   // Set the burn card.
@@ -574,7 +655,7 @@ function getNextCard() {
   }
   
   var nextCard = deck.deal();
-	//cardProbability(nextCard.rank,numCards);
+
   return nextCard;
 }
 
@@ -801,7 +882,7 @@ function cardProbability(dealtCard, totalCards) {
 	
 	var total;
 	total = dealtCard/totalCards;
-	$("#prob").html(total.toFixed(2) * 100 + "%");
+	return total;
 }
 
 function playerHit() {
