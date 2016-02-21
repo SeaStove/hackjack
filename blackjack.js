@@ -396,6 +396,7 @@ function handReset() {
 
 function handAddCard(card, down) {
 
+  
   var n;
   var node;
 
@@ -504,8 +505,10 @@ function getNextCard() {
     alert("New Deck");
     newDeck();
   }
-
-  return deck.deal();
+  
+  var nextCard = deck.deal();
+	cardProbability(nextCard.rank,52);
+  return nextCard;
 }
 
 function startRound() {
@@ -728,11 +731,14 @@ function playerSurrender() {
 }
 
 function cardProbability(dealtCard, totalCards) {
+	if(dealtCard == NaN){
+		if(dealtCard == "A")
+	}
+	
 	var total;
 	total = dealtCard/totalCards;
-	return total;
+	$("#prob").html(total.toFixed(2) * 100 + "%");
 }
-setInterval(cardProbability,1000);
 
 function playerHit() {
 
