@@ -1,0 +1,809 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		181AEFD41C792A3800ADA147 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 181AEFD31C792A3800ADA147 /* background.png */; };
+		181AEFD61C792F5A00ADA147 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181AEFD51C792F5A00ADA147 /* Main.storyboard */; };
+		181AEFD81C799E0F00ADA147 /* MessagingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181AEFD71C799E0F00ADA147 /* MessagingController.swift */; };
+		184F48F21C7829F4006E8508 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F48F11C7829F4006E8508 /* AppDelegate.swift */; };
+		184F48F91C7829F4006E8508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184F48F81C7829F4006E8508 /* Assets.xcassets */; };
+		184F48FC1C7829F4006E8508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184F48FA1C7829F4006E8508 /* LaunchScreen.storyboard */; };
+		184F49071C7829F4006E8508 /* HackJack_ioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F49061C7829F4006E8508 /* HackJack_ioTests.swift */; };
+		184F49121C7829F4006E8508 /* HackJack_ioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F49111C7829F4006E8508 /* HackJack_ioUITests.swift */; };
+		184F49171C7829F4006E8508 /* HackJack.io WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 184F49161C7829F4006E8508 /* HackJack.io WatchKit App.app */; };
+		184F491D1C7829F4006E8508 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184F491B1C7829F4006E8508 /* Interface.storyboard */; };
+		184F491F1C7829F4006E8508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184F491E1C7829F4006E8508 /* Assets.xcassets */; };
+		184F49261C7829F4006E8508 /* HackJack.io WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 184F49251C7829F4006E8508 /* HackJack.io WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		184F492B1C7829F4006E8508 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F492A1C7829F4006E8508 /* InterfaceController.swift */; };
+		184F492D1C7829F4006E8508 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F492C1C7829F4006E8508 /* ExtensionDelegate.swift */; };
+		184F492F1C7829F4006E8508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184F492E1C7829F4006E8508 /* Assets.xcassets */; };
+		184F49471C78D5A5006E8508 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F49461C78D5A5006E8508 /* MainMenuViewController.swift */; };
+		1850AF551C78FB3500BB8BA6 /* Ace.png in Resources */ = {isa = PBXBuildFile; fileRef = 1850AF541C78FB3500BB8BA6 /* Ace.png */; };
+		1850AF571C78FFE500BB8BA6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850AF561C78FFE500BB8BA6 /* GameViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		184F49031C7829F4006E8508 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 184F48E61C7829F4006E8508 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 184F48ED1C7829F4006E8508;
+			remoteInfo = HackJack.io;
+		};
+		184F490E1C7829F4006E8508 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 184F48E61C7829F4006E8508 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 184F48ED1C7829F4006E8508;
+			remoteInfo = HackJack.io;
+		};
+		184F49181C7829F4006E8508 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 184F48E61C7829F4006E8508 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 184F49151C7829F4006E8508;
+			remoteInfo = "HackJack.io WatchKit App";
+		};
+		184F49271C7829F4006E8508 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 184F48E61C7829F4006E8508 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 184F49241C7829F4006E8508;
+			remoteInfo = "HackJack.io WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		184F49361C7829F4006E8508 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				184F49261C7829F4006E8508 /* HackJack.io WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184F493A1C7829F4006E8508 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				184F49171C7829F4006E8508 /* HackJack.io WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		181AEFD31C792A3800ADA147 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		181AEFD51C792F5A00ADA147 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		181AEFD71C799E0F00ADA147 /* MessagingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingController.swift; sourceTree = "<group>"; };
+		184F48EE1C7829F4006E8508 /* HackJack.io.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackJack.io.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		184F48F11C7829F4006E8508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		184F48F81C7829F4006E8508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		184F48FB1C7829F4006E8508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		184F48FD1C7829F4006E8508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184F49021C7829F4006E8508 /* HackJack.ioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackJack.ioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		184F49061C7829F4006E8508 /* HackJack_ioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackJack_ioTests.swift; sourceTree = "<group>"; };
+		184F49081C7829F4006E8508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184F490D1C7829F4006E8508 /* HackJack.ioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackJack.ioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		184F49111C7829F4006E8508 /* HackJack_ioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackJack_ioUITests.swift; sourceTree = "<group>"; };
+		184F49131C7829F4006E8508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184F49161C7829F4006E8508 /* HackJack.io WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HackJack.io WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		184F491C1C7829F4006E8508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		184F491E1C7829F4006E8508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		184F49201C7829F4006E8508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184F49251C7829F4006E8508 /* HackJack.io WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HackJack.io WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		184F492A1C7829F4006E8508 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		184F492C1C7829F4006E8508 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		184F492E1C7829F4006E8508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		184F49301C7829F4006E8508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184F49461C78D5A5006E8508 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		184F49481C78DB08006E8508 /* HackJack.io.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HackJack.io.entitlements; sourceTree = "<group>"; };
+		1850AF541C78FB3500BB8BA6 /* Ace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ace.png; path = ../Ace.png; sourceTree = "<group>"; };
+		1850AF561C78FFE500BB8BA6 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		184F48EB1C7829F4006E8508 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184F48FF1C7829F4006E8508 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184F490A1C7829F4006E8508 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184F49221C7829F4006E8508 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		184F48E51C7829F4006E8508 = {
+			isa = PBXGroup;
+			children = (
+				1850AF531C78FB2000BB8BA6 /* images */,
+				184F48F01C7829F4006E8508 /* HackJack.io */,
+				184F49051C7829F4006E8508 /* HackJack.ioTests */,
+				184F49101C7829F4006E8508 /* HackJack.ioUITests */,
+				184F491A1C7829F4006E8508 /* HackJack.io WatchKit App */,
+				184F49291C7829F4006E8508 /* HackJack.io WatchKit Extension */,
+				184F48EF1C7829F4006E8508 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		184F48EF1C7829F4006E8508 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				184F48EE1C7829F4006E8508 /* HackJack.io.app */,
+				184F49021C7829F4006E8508 /* HackJack.ioTests.xctest */,
+				184F490D1C7829F4006E8508 /* HackJack.ioUITests.xctest */,
+				184F49161C7829F4006E8508 /* HackJack.io WatchKit App.app */,
+				184F49251C7829F4006E8508 /* HackJack.io WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		184F48F01C7829F4006E8508 /* HackJack.io */ = {
+			isa = PBXGroup;
+			children = (
+				184F49481C78DB08006E8508 /* HackJack.io.entitlements */,
+				184F48F11C7829F4006E8508 /* AppDelegate.swift */,
+				184F48F81C7829F4006E8508 /* Assets.xcassets */,
+				184F48FA1C7829F4006E8508 /* LaunchScreen.storyboard */,
+				184F48FD1C7829F4006E8508 /* Info.plist */,
+				184F49461C78D5A5006E8508 /* MainMenuViewController.swift */,
+				1850AF561C78FFE500BB8BA6 /* GameViewController.swift */,
+				181AEFD51C792F5A00ADA147 /* Main.storyboard */,
+			);
+			path = HackJack.io;
+			sourceTree = "<group>";
+		};
+		184F49051C7829F4006E8508 /* HackJack.ioTests */ = {
+			isa = PBXGroup;
+			children = (
+				184F49061C7829F4006E8508 /* HackJack_ioTests.swift */,
+				184F49081C7829F4006E8508 /* Info.plist */,
+			);
+			path = HackJack.ioTests;
+			sourceTree = "<group>";
+		};
+		184F49101C7829F4006E8508 /* HackJack.ioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				184F49111C7829F4006E8508 /* HackJack_ioUITests.swift */,
+				184F49131C7829F4006E8508 /* Info.plist */,
+			);
+			path = HackJack.ioUITests;
+			sourceTree = "<group>";
+		};
+		184F491A1C7829F4006E8508 /* HackJack.io WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				184F491B1C7829F4006E8508 /* Interface.storyboard */,
+				184F491E1C7829F4006E8508 /* Assets.xcassets */,
+				184F49201C7829F4006E8508 /* Info.plist */,
+			);
+			path = "HackJack.io WatchKit App";
+			sourceTree = "<group>";
+		};
+		184F49291C7829F4006E8508 /* HackJack.io WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				184F492A1C7829F4006E8508 /* InterfaceController.swift */,
+				184F492C1C7829F4006E8508 /* ExtensionDelegate.swift */,
+				184F492E1C7829F4006E8508 /* Assets.xcassets */,
+				184F49301C7829F4006E8508 /* Info.plist */,
+				181AEFD71C799E0F00ADA147 /* MessagingController.swift */,
+			);
+			path = "HackJack.io WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		1850AF531C78FB2000BB8BA6 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				181AEFD31C792A3800ADA147 /* background.png */,
+				1850AF541C78FB3500BB8BA6 /* Ace.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		184F48ED1C7829F4006E8508 /* HackJack.io */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 184F493B1C7829F4006E8508 /* Build configuration list for PBXNativeTarget "HackJack.io" */;
+			buildPhases = (
+				184F48EA1C7829F4006E8508 /* Sources */,
+				184F48EB1C7829F4006E8508 /* Frameworks */,
+				184F48EC1C7829F4006E8508 /* Resources */,
+				184F493A1C7829F4006E8508 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				184F49191C7829F4006E8508 /* PBXTargetDependency */,
+			);
+			name = HackJack.io;
+			productName = HackJack.io;
+			productReference = 184F48EE1C7829F4006E8508 /* HackJack.io.app */;
+			productType = "com.apple.product-type.application";
+		};
+		184F49011C7829F4006E8508 /* HackJack.ioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 184F493E1C7829F4006E8508 /* Build configuration list for PBXNativeTarget "HackJack.ioTests" */;
+			buildPhases = (
+				184F48FE1C7829F4006E8508 /* Sources */,
+				184F48FF1C7829F4006E8508 /* Frameworks */,
+				184F49001C7829F4006E8508 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				184F49041C7829F4006E8508 /* PBXTargetDependency */,
+			);
+			name = HackJack.ioTests;
+			productName = HackJack.ioTests;
+			productReference = 184F49021C7829F4006E8508 /* HackJack.ioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		184F490C1C7829F4006E8508 /* HackJack.ioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 184F49411C7829F4006E8508 /* Build configuration list for PBXNativeTarget "HackJack.ioUITests" */;
+			buildPhases = (
+				184F49091C7829F4006E8508 /* Sources */,
+				184F490A1C7829F4006E8508 /* Frameworks */,
+				184F490B1C7829F4006E8508 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				184F490F1C7829F4006E8508 /* PBXTargetDependency */,
+			);
+			name = HackJack.ioUITests;
+			productName = HackJack.ioUITests;
+			productReference = 184F490D1C7829F4006E8508 /* HackJack.ioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		184F49151C7829F4006E8508 /* HackJack.io WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 184F49371C7829F4006E8508 /* Build configuration list for PBXNativeTarget "HackJack.io WatchKit App" */;
+			buildPhases = (
+				184F49141C7829F4006E8508 /* Resources */,
+				184F49361C7829F4006E8508 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				184F49281C7829F4006E8508 /* PBXTargetDependency */,
+			);
+			name = "HackJack.io WatchKit App";
+			productName = "HackJack.io WatchKit App";
+			productReference = 184F49161C7829F4006E8508 /* HackJack.io WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		184F49241C7829F4006E8508 /* HackJack.io WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 184F49331C7829F4006E8508 /* Build configuration list for PBXNativeTarget "HackJack.io WatchKit Extension" */;
+			buildPhases = (
+				184F49211C7829F4006E8508 /* Sources */,
+				184F49221C7829F4006E8508 /* Frameworks */,
+				184F49231C7829F4006E8508 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HackJack.io WatchKit Extension";
+			productName = "HackJack.io WatchKit Extension";
+			productReference = 184F49251C7829F4006E8508 /* HackJack.io WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		184F48E61C7829F4006E8508 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					184F48ED1C7829F4006E8508 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = TY868E7BMS;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					184F49011C7829F4006E8508 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 184F48ED1C7829F4006E8508;
+					};
+					184F490C1C7829F4006E8508 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 184F48ED1C7829F4006E8508;
+					};
+					184F49151C7829F4006E8508 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = TY868E7BMS;
+					};
+					184F49241C7829F4006E8508 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = TY868E7BMS;
+					};
+				};
+			};
+			buildConfigurationList = 184F48E91C7829F4006E8508 /* Build configuration list for PBXProject "HackJack.io" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 184F48E51C7829F4006E8508;
+			productRefGroup = 184F48EF1C7829F4006E8508 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				184F48ED1C7829F4006E8508 /* HackJack.io */,
+				184F49011C7829F4006E8508 /* HackJack.ioTests */,
+				184F490C1C7829F4006E8508 /* HackJack.ioUITests */,
+				184F49151C7829F4006E8508 /* HackJack.io WatchKit App */,
+				184F49241C7829F4006E8508 /* HackJack.io WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		184F48EC1C7829F4006E8508 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184F48FC1C7829F4006E8508 /* LaunchScreen.storyboard in Resources */,
+				181AEFD41C792A3800ADA147 /* background.png in Resources */,
+				184F48F91C7829F4006E8508 /* Assets.xcassets in Resources */,
+				1850AF551C78FB3500BB8BA6 /* Ace.png in Resources */,
+				181AEFD61C792F5A00ADA147 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184F49001C7829F4006E8508 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184F490B1C7829F4006E8508 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184F49141C7829F4006E8508 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184F491F1C7829F4006E8508 /* Assets.xcassets in Resources */,
+				184F491D1C7829F4006E8508 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184F49231C7829F4006E8508 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184F492F1C7829F4006E8508 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		184F48EA1C7829F4006E8508 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184F49471C78D5A5006E8508 /* MainMenuViewController.swift in Sources */,
+				1850AF571C78FFE500BB8BA6 /* GameViewController.swift in Sources */,
+				184F48F21C7829F4006E8508 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184F48FE1C7829F4006E8508 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184F49071C7829F4006E8508 /* HackJack_ioTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184F49091C7829F4006E8508 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184F49121C7829F4006E8508 /* HackJack_ioUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184F49211C7829F4006E8508 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184F492D1C7829F4006E8508 /* ExtensionDelegate.swift in Sources */,
+				181AEFD81C799E0F00ADA147 /* MessagingController.swift in Sources */,
+				184F492B1C7829F4006E8508 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		184F49041C7829F4006E8508 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 184F48ED1C7829F4006E8508 /* HackJack.io */;
+			targetProxy = 184F49031C7829F4006E8508 /* PBXContainerItemProxy */;
+		};
+		184F490F1C7829F4006E8508 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 184F48ED1C7829F4006E8508 /* HackJack.io */;
+			targetProxy = 184F490E1C7829F4006E8508 /* PBXContainerItemProxy */;
+		};
+		184F49191C7829F4006E8508 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 184F49151C7829F4006E8508 /* HackJack.io WatchKit App */;
+			targetProxy = 184F49181C7829F4006E8508 /* PBXContainerItemProxy */;
+		};
+		184F49281C7829F4006E8508 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 184F49241C7829F4006E8508 /* HackJack.io WatchKit Extension */;
+			targetProxy = 184F49271C7829F4006E8508 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		184F48FA1C7829F4006E8508 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				184F48FB1C7829F4006E8508 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		184F491B1C7829F4006E8508 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				184F491C1C7829F4006E8508 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		184F49311C7829F4006E8508 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		184F49321C7829F4006E8508 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		184F49341C7829F4006E8508 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "HackJack.io WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.HackJack-io.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		184F49351C7829F4006E8508 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "HackJack.io WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.HackJack-io.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		184F49381C7829F4006E8508 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = HackJack_io_WatchKit_Extension;
+				INFOPLIST_FILE = "HackJack.io WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.HackJack-io.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		184F49391C7829F4006E8508 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = HackJack_io_WatchKit_Extension;
+				INFOPLIST_FILE = "HackJack.io WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.HackJack-io.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		184F493C1C7829F4006E8508 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HackJack.io/HackJack.io.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = HackJack.io/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.HackJack-io";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		184F493D1C7829F4006E8508 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HackJack.io/HackJack.io.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = HackJack.io/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.HackJack-io";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		184F493F1C7829F4006E8508 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HackJack.ioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.HackJack-ioTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackJack.io.app/HackJack.io";
+			};
+			name = Debug;
+		};
+		184F49401C7829F4006E8508 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HackJack.ioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.HackJack-ioTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackJack.io.app/HackJack.io";
+			};
+			name = Release;
+		};
+		184F49421C7829F4006E8508 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HackJack.ioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.HackJack-ioUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HackJack.io;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		184F49431C7829F4006E8508 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HackJack.ioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.HackJack-ioUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HackJack.io;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		184F48E91C7829F4006E8508 /* Build configuration list for PBXProject "HackJack.io" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184F49311C7829F4006E8508 /* Debug */,
+				184F49321C7829F4006E8508 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		184F49331C7829F4006E8508 /* Build configuration list for PBXNativeTarget "HackJack.io WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184F49341C7829F4006E8508 /* Debug */,
+				184F49351C7829F4006E8508 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		184F49371C7829F4006E8508 /* Build configuration list for PBXNativeTarget "HackJack.io WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184F49381C7829F4006E8508 /* Debug */,
+				184F49391C7829F4006E8508 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		184F493B1C7829F4006E8508 /* Build configuration list for PBXNativeTarget "HackJack.io" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184F493C1C7829F4006E8508 /* Debug */,
+				184F493D1C7829F4006E8508 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		184F493E1C7829F4006E8508 /* Build configuration list for PBXNativeTarget "HackJack.ioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184F493F1C7829F4006E8508 /* Debug */,
+				184F49401C7829F4006E8508 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		184F49411C7829F4006E8508 /* Build configuration list for PBXNativeTarget "HackJack.ioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184F49421C7829F4006E8508 /* Debug */,
+				184F49431C7829F4006E8508 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 184F48E61C7829F4006E8508 /* Project object */;
+}
