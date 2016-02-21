@@ -90,17 +90,39 @@ body {background-color:black;}
     <input id="double"    class="button" type="reset" value="Double"    onclick="playerDouble();return false;"    disabled="disabled" />
   </div>
 </form>
-
-<span> <font color = "white">
-<p>True Count: <div id="prob"></div>
-</p></font></span>
-
 <div class = "container text-center">
-<table class = "table">
-<font color = "white">
+<font color = "white"><span>
+<h2 id ="prob"></div><h3 class = "container text-center">True Count</h3>
+</h2></font></div>
+
+<div>
+<table class = "probstable">
+<tbody>
 <tr>
- <th>P(A) </th> <th>P(2) </th> <th>P(3) </th> <th>P(4) </th> <th>P(5) </th> <th>P(6) </th> <th>P(7) </th> <th>P(8) </th> <th>P(9) </th> <th>P(10)</th></tr>
-</font>
+ <td>P(A) </td> 
+ <td>P(2) </td>
+ <td>P(3) </td> 
+ <td>P(4) </td> 
+ <td>P(5) </td>
+ <td>P(6) </td> 
+ <td>P(7) </td>
+ <td>P(8) </td>
+ <td>P(9) </td>
+ <td>P(10)</td>
+ </tr>
+ <tr>
+ <td id = "A"></td>
+ <td id = "2"></td> 
+ <td id = "3"></td>
+ <td id = "4"></td>
+ <td id = "5"></td> 
+ <td id = "6"></td>
+ <td id = "7"></td>
+ <td id = "8"></td> 
+ <td id = "9"></td>
+ <td id = "10"></td>
+ </tr>
+ </tbody>
 </table>
 </div>
 

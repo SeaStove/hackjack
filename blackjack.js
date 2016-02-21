@@ -332,6 +332,8 @@ var card10 = 48;
 var cardA = 12;
 var numCards = 156;
 
+var cardCounter = [12,12,12,12,12,12,12,12,12,48];
+
 
 // Globals.
 
@@ -454,78 +456,80 @@ function handAddCard(card, down) {
   n = this.cards.length;
   this.cards[n] = card;
   
-	// switch(card.rank)
-	// {
-		// case '2':
-			// card2--;
-			// probability(card2,numCards);
-			// break;
+	switch(card.rank)
+	{
+		case '2':
+			cardCounter[1]--;
+			break;
 			
-		// case '3':
-			// card3--;
-			// probability(card3,numCards);
-			// break;
+		case '3':
+			cardCounter[2]--;
+			break;
 			
-		// case '4':
-			// card4--;
-			// probability(card4,numCards);
-			// break;
+		case '4':
+			cardCounter[3]--;
+			break;
 			
-		// case '5':
-			// card5--;
-			// probability(card5,numCards);
-			// break;
+		case '5':
+			cardCounter[4]--;
+			break;
 			
-		// case '6':
-			// card6--;
-			// probability(card6,numCards);
-			// break;
+		case '6':
+			cardCounter[5]--;
+			break;
 			
-		// case '7':
-			// card7--;
-			// probability(card7,numCards);
-			// break;
+		case '7':
+			cardCounter[6]--;
+			break;
 			
-		// case '8':
-			// card8--;
-			// probability(card8,numCards);
-			// break;
+		case '8':
+			cardCounter[7]--;
+			break;
 			
-		// case '9':
-			// card9--;
-			// probability(card9,numCards);
-			// break;
+		case '9':
+			cardCounter[8]--;
+			break;
 			
-		// case '10':
-			// card10--;
-			// probability(card10,numCards);
-			// break;
+		case '10':
+			cardCounter[9]--;
+			break;
 			
-		// case 'J':
-			// card10--;
-			// probability(card10,numCards);
-			// break;
+		case 'J':
+			cardCounter[9]--;
+			break;
 			
-		// case 'Q':
-			// card10--;
-			// probability(card10,numCards);
-			// break;
+		case 'Q':
+			cardCounter[9]--;
+			break;
 			
-		// case 'K':
-			// card10--;
-			// probability(card10,numCards);
-			// break;
+		case 'K':
+			cardCounter[9]--;
+			break;
 			
-		// case 'A':
-			// cardA--;
-			// probability(cardA,numCards);
-			// break;
-		// default:
-			// console.log("Error with your Switch statement idiot. Shouldn't get here EVER");
-			// break;		
-	// }
+		case 'A':
+			cardCounter[0]--;
+			break;
+			
+		default:
+			console.log("Error with your Switch statement idiot. Shouldn't get here EVER");
+			break;		
+	}
+	
+	$('#A').html(probability(cardCounter[0],numCards));
+	$('#2').html(probability(cardCounter[1],numCards));
+	$('#3').html(probability(cardCounter[2],numCards));
+	$('#4').html(probability(cardCounter[3],numCards));
+	$('#5').html(probability(cardCounter[4],numCards));
+	$('#6').html(probability(cardCounter[5],numCards));
+	$('#7').html(probability(cardCounter[6],numCards));
+	$('#8').html(probability(cardCounter[7],numCards));
+	$('#9').html(probability(cardCounter[8],numCards));
+	$('#10').html(probability(cardCounter[9],numCards));
+
+	
 
   //update running count based on card.rank
+  
   if(!down)
   {
 	  
@@ -878,10 +882,11 @@ function playerSurrender() {
   endRound();
 }
 
-function cardProbability(dealtCard, totalCards) {
+function probability(dealtCard, totalCards) {
 	
 	var total;
 	total = dealtCard/totalCards;
+	total = total.toFixed(4) + "%";
 	return total;
 }
 
