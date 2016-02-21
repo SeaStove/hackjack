@@ -239,7 +239,7 @@ function Stack() {
 
 function stackMakeDeck(n) {
 
-  this.decks = 6;
+  this.decks = 3;
 
   var ranks = new Array("A", "2", "3", "4", "5", "6", "7", "8", "9",
                         "10", "J", "Q", "K");
@@ -475,9 +475,10 @@ function handAddCard(card, down) {
   else
     this.top += this.topIncr;
 }
+
 function trueCount(runningCount)
 {
-	var decks = 6;
+	var decks = 2;
 	var trueCount = 0;
 	trueCount = runningCount/decks;
 	var n = trueCount.toFixed(2);
