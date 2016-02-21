@@ -5,10 +5,10 @@
     $id = htmlspecialchars($_POST['id']);
     $card = htmlspecialchars($_POST['card']);
     $cardVal = htmlspecialchars($_POST['cardVal']);
-    $total = htmlspecialchars($_POST['total']));
+    $total = htmlspecialchars($_POST['total']);
 
     $sql = "UPDATE probability
-            SET " . $card . " = '" . $cardVal "', total = '" . $total "'
+            SET " . $card . " = '" . $cardVal . "', total = '" . $total . "'
             WHERE id = '" . $id . "';";
     $result = mysqli_query($mysqli,$sql);
     if (!$result) {
