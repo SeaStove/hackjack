@@ -26,13 +26,13 @@ function Card(rank, suit) {
 //Get and Post
 
 function updateTrue(id,total,decks,running){
-	//$.post("http://hackjack.cloudapp.net/api/true/update.php", 
+	//$.post("http://hackjack.cloudapp.net/api/true/update.php",
 			//{ id: this.id, total: this.cards.length, decks = this.decks, running = this.running } );
 
 }
 
 function updateProb(_card, _cardVal){
-	//$.post("http://hackjack.cloudapp.net/api/prob/update.php", 
+	//$.post("http://hackjack.cloudapp.net/api/prob/update.php",
 		//	{ id: this.id, total: this.cards.length, card = _card, cardVal = _cardVal } );
 
 }
@@ -51,7 +51,7 @@ function createGame(){
 }
 
 //-----------------------------------------------------------------------------
-// cardCreateNode(): Returns a DIV node which can be used to display the card 
+// cardCreateNode(): Returns a DIV node which can be used to display the card
 // on a page.
 //-----------------------------------------------------------------------------
 // Preload graphics.
@@ -232,7 +232,7 @@ function Stack() {
   this.deal      = stackDeal;
   this.cardCount = stackCardCount;
 }
-	
+
 //-----------------------------------------------------------------------------
 // stackMakeDeck(n): Initializes a stack using 'n' packs of cards.
 //-----------------------------------------------------------------------------
@@ -262,7 +262,7 @@ function stackMakeDeck(n) {
 }
 
 //-----------------------------------------------------------------------------
-// stackShuffle(n): Shuffles a stack of cards 'n' times. 
+// stackShuffle(n): Shuffles a stack of cards 'n' times.
 //-----------------------------------------------------------------------------
 
 function stackShuffle(n) {
@@ -361,9 +361,9 @@ window.onload = initGame;
 function initGame() {
 
   var i;
-  
+
   createGame();
-  
+
   // Locate credits and default bet text nodes on the page.
 
   creditsTextNode = document.getElementById("credits").firstChild;
@@ -389,7 +389,7 @@ function initGame() {
 }
 
 // ----------------------------------------------------------------------------
-// Blackjack hand object.                    
+// Blackjack hand object.
 // ----------------------------------------------------------------------------
 
 Hand.prototype.leftIncr  =  2.5;  // For positioning cards.
@@ -446,7 +446,7 @@ function handReset() {
 
 function handAddCard(card, down) {
 
-  
+
   var n;
   var node;
   numCards --;
@@ -455,66 +455,66 @@ function handAddCard(card, down) {
 
   n = this.cards.length;
   this.cards[n] = card;
-  
+
 	switch(card.rank)
 	{
 		case '2':
 			cardCounter[1]--;
 			break;
-			
+
 		case '3':
 			cardCounter[2]--;
 			break;
-			
+
 		case '4':
 			cardCounter[3]--;
 			break;
-			
+
 		case '5':
 			cardCounter[4]--;
 			break;
-			
+
 		case '6':
 			cardCounter[5]--;
 			break;
-			
+
 		case '7':
 			cardCounter[6]--;
 			break;
-			
+
 		case '8':
 			cardCounter[7]--;
 			break;
-			
+
 		case '9':
 			cardCounter[8]--;
 			break;
-			
+
 		case '10':
 			cardCounter[9]--;
 			break;
-			
+
 		case 'J':
 			cardCounter[9]--;
 			break;
-			
+
 		case 'Q':
 			cardCounter[9]--;
 			break;
-			
+
 		case 'K':
 			cardCounter[9]--;
 			break;
-			
+
 		case 'A':
 			cardCounter[0]--;
 			break;
-			
+
 		default:
 			console.log("Error with your Switch statement idiot. Shouldn't get here EVER");
-			break;		
+			break;
 	}
-	
+
 	$('#A').html(probability(cardCounter[0],numCards));
 	$('#2').html(probability(cardCounter[1],numCards));
 	$('#3').html(probability(cardCounter[2],numCards));
@@ -526,21 +526,21 @@ function handAddCard(card, down) {
 	$('#9').html(probability(cardCounter[8],numCards));
 	$('#10').html(probability(cardCounter[9],numCards));
 
-	
+
 
   //update running count based on card.rank
-  
+
   if(!down)
   {
-	  
+
 	if(card.rank == "A" || card.rank == "K" || card.rank == "Q" || card.rank == "J" || card.rank == "10")
 	  running--;
-  
+
 	if(card.rank == "2" || card.rank == "3" || card.rank == "4" ||card.rank == "5" || card.rank == "6")
 	  running++;
-	
 
-  
+
+
 	trueCount(running);
   }
 
@@ -657,7 +657,7 @@ function getNextCard() {
     alert("New Deck");
     newDeck();
   }
-  
+
   var nextCard = deck.deal();
 
   return nextCard;
@@ -883,10 +883,10 @@ function playerSurrender() {
 }
 
 function probability(dealtCard, totalCards) {
-	
+
 	var total;
 	total = dealtCard/totalCards;
-	total = total.toFixed(4) + "%";
+	total = (total.toFixed(3));
 	return total;
 }
 
@@ -1242,4 +1242,3 @@ function removeClassName(el, name)
 			newList.push(curList[i]);
 	el.className = newList.join(" ");
 }
-
