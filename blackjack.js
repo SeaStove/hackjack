@@ -23,11 +23,37 @@ function Card(rank, suit) {
   this.createNode = cardCreateNode;
 }
 
+//Get and Post
+
+function updateTrue(id,total,decks,running){
+	$.post("http://hackjack.cloudapp.net/api/true/update.php", 
+			{ id: this.id, total: this.cards.length, decks = this.decks, running = this.running } );
+
+}
+
+function updateProb(_card, _cardVal){
+	$.post("http://hackjack.cloudapp.net/api/prob/update.php", 
+			{ id: this.id, total: this.cards.length, card = _card, cardVal = _cardVal } );
+
+}
+
+function getTrue(){
+	$.post("http://hackjack.cloudapp.net/api/true/get.php", { id: this.id } );
+
+}
+
+function getProb(){
+	$.post("http://hackjack.cloudapp.net/api/prob/get.php", { id : this.id} );
+}
+
+function createGame(){
+	$.post("http://hackjack.cloudapp.net/api/game/create.php", function(data){this.id = data.id});
+}
+
 //-----------------------------------------------------------------------------
 // cardCreateNode(): Returns a DIV node which can be used to display the card 
 // on a page.
 //-----------------------------------------------------------------------------
-
 // Preload graphics.
 
 var cardImg0 = new Image(); cardImg0.src= "graphics/cardback.gif";
@@ -213,6 +239,8 @@ function Stack() {
 
 function stackMakeDeck(n) {
 
+  this.decks = n;
+
   var ranks = new Array("A", "2", "3", "4", "5", "6", "7", "8", "9",
                         "10", "J", "Q", "K");
   var suits = new Array("C", "D", "H", "S");
@@ -292,6 +320,7 @@ var initBet       =   10;
 
 var dealTimeDelay =  750;
 
+
 // Globals.
 
 var deck;
@@ -306,6 +335,10 @@ var creditsTextNode, defaultTextNode;
 
 var dealRoundCounter;
 
+var id = -1;
+var total = 52;
+var decks = 1;
+var running = 0;
 // Initialize game on page load.
 
 window.onload = initGame;
@@ -313,7 +346,9 @@ window.onload = initGame;
 function initGame() {
 
   var i;
-
+  
+  createGame();
+  
   // Locate credits and default bet text nodes on the page.
 
   creditsTextNode = document.getElementById("credits").firstChild;
