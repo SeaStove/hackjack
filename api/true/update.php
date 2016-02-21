@@ -5,11 +5,11 @@
     $id = htmlspecialchars($_POST['id']);
     $total = htmlspecialchars($_POST['total']);
     $decks = htmlspecialchars($_POST['decks']);
-    $running = htmlspecialchars($_POST['running']));
+    $running = htmlspecialchars($_POST['running']);
 
-    $sql = "UPDATE probability
-            SET total = '" . $total "',
-                decks = '" . $decks "',
+    $sql = "UPDATE trueCount
+            SET total = '" . $total . "',
+                decks = '" . $decks  . "',
                 running = '" . $running . "'
             WHERE id = '" . $id . "';";
     $result = mysqli_query($mysqli,$sql);

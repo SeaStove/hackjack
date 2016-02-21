@@ -11,7 +11,7 @@ CREATE TABLE game(
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS probability;
-
+,m
 CREATE TABLE probability (
   id int(11),
   ace int(11) DEFAULT 4,

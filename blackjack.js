@@ -762,6 +762,13 @@ function playerSurrender() {
   endRound();
 }
 
+function cardProbability(dealtCard, totalCards) {
+	var total;
+	total = dealtCard/totalCards;
+	return total;
+}
+setInterval(cardProbability,1000);
+
 function playerHit() {
 
   var n, p;
